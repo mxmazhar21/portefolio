@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- =================== -->
+    <!-- 🌐 RESET ET BASE    -->
+    <!-- =================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maz'Wave</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="../assets/images/m2.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============================== -->
+    <!-- 🎥 Vidéo de fond + Overlay  🌒  -->
+    <!-- ============================== -->
+    <div class="video-background-container">
+      <video autoplay muted loop class="background-video">
+        <source
+          src="../assets/videos/background_contact-2.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="video-fade-overlay"></div>
+    </div>
+
+    <!-- =================== -->
+    <!-- 🗺️ NAVBAR FIXE      -->
+    <!-- =================== -->
+    <nav class="navbar">
+      <div class="logo">Mon Portfolio</div>
+      <ul class="nav-links">
+        <li>
+          <a href="../index-accueil/index.html" class="nav-link">Accueil</a>
+        </li>
+        <li>
+          <a href="../apropos/apropos.html" class="nav-link">À propos</a>
+        </li>
+        <li>
+          <a href="../projet/projet.html" class="nav-link">Projets</a>
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="nav-link"
+            style="border-bottom: 2px solid #ffce73"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 🔁 Transition de page (à placer après la navbar, pas dans la liste) -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- =================== -->
+    <!-- 👋 SECTION CONTACT -->
+    <!-- =================== -->
+    <header>
+      <div class="contact-container">
+        <h1>Contactez-moi</h1>
+
+        <!-- ✉️ Informations de contact -->
+        <div class="contact-info">
+          <p>
+            <strong>Email :</strong>
+            <a href="mailto:m.mazhar.pro21@gmail.com"
+              >m.mazhar.pro21@gmail.com</a
+            >
+          </p>
+          <p>
+            <strong>Téléphone :</strong>
+            <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+          </p>
+          <p><strong>Ville :</strong> Le Blanc-mesnil, France</p>
+        </div>
+
+        <!-- 📬 Boutons d'action -->
+        <div class="contact-buttons">
+          <a href="mailto:m.mazhar.pro21@gmail.com" class="contact-btn mail-btn"
+            >📨 Écrire un mail</a
+          >
+          <a
+            href="https://www.linkedin.com/in/mazhar-profil"
+            target="_blank"
+            class="contact-btn linkedin-btn"
+            >🔗 LinkedIn</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- =================== -->
+    <!-- ✨ EFFETS & JS        -->
+    <!-- =================== -->
+    <script>
+      // Overlay  🌒
+      const video = document.querySelector(".background-video");
+      const overlay = document.querySelector(".video-fade-overlay");
+
+      video.addEventListener("timeupdate", () => {
+        const timeLeft = video.duration - video.currentTime;
+
+        // Fade-out en fin de vidéo
+        if (timeLeft <= 1.2) {
+          overlay.style.opacity = 1;
+        }
+
+        // Fade-in en tout début de vidéo
+        if (video.currentTime <= 0.5) {
+          overlay.style.opacity = 0;
+        }
+      });
+
+      // ✅ Animation redirection
+      const links = document.querySelectorAll(".nav-link");
+      const transitionLayer = document.getElementById("page-transition");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // bloque la navigation immédiate
+
+          const href = this.href;
+
+          // active le blur et le fondu
+          transitionLayer.classList.add("active");
+          document.body.classList.add("blur-out");
+
+          // après la durée de l'animation, on redirige
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500); // durée en ms (doit correspondre à la transition CSS)
+        });
+      });
+
+      // ✅ Reload Animation
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Contact-form
+      const form = document.getElementById("contact-form");
+      const message = document.getElementById("form-message");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        message.textContent = "Merci pour votre message ! ✉️";
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

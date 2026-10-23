@@ -1,0 +1,167 @@
+/* =================== */
+/* 🌐 RESET ET BASE    */
+/* =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+body {
+  filter: blur(10px);
+  transition: filter 1s ease;
+  background-color: transparent;
+}
+
+html {
+  background-color: black;
+}
+
+body.loaded {
+  filter: blur(0);
+}
+
+/* =================== */
+/* 🧭 NAVBAR FIXE      */
+/* =================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ffce73;
+}
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2000;
+  pointer-events: none;
+  transition: backdrop-filter 0.6s ease, background-color 0.6s ease;
+}
+
+.page-transition.active {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.blur-out {
+  filter: blur(10px);
+  transition: filter 0.5s ease;
+}
+
+/* =================== */
+/* 🖼️ HEADER (fond)    */
+/* =================== */
+/* 🎥 Vidéo de fond */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ⬅️ change cover → contain */
+  z-index: -1;
+  background-color: black; /* optionnel, pour éviter fond blanc */
+}
+
+/* Ajuster l'opacité du fond header s'il y a besoin de lisibilité */
+header {
+  background: rgba(0, 0, 0, 0.4);
+  /* semi-transparent si tu veux assombrir un peu le fond */
+}
+
+/* =================== */
+/* 👋 HERO / Accueil   */
+/* =================== */
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  padding-top: 80px; /* pour compenser la navbar fixe */
+  box-sizing: border-box;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #dddddd;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 2em;
+  opacity: 0.8;
+  color: #dddddd;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* =================== */
+/* ✨ EFFETS            */
+/* =================== */
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
