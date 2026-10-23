@@ -613,20 +613,105 @@ footer p {
 }
 
 /* ===== 8. PROJETS (voir <main class="projects"> dans projet.html) ===== */
+/* Même fond et même titre que la page À propos (.page-title est dans la partie À PROPOS) */
 .projects {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 60px; /* pour ne pas passer sous la navbar */
+  padding: 0 var(--espace-s) var(--espace-m);
+  background: var(--fond-carte);
 }
 
-.projects h1 {
-  margin-bottom: 20px;
-  font-size: 2rem;
+/* Les cartes se mettent côte à côte quand il y a de la place, centrées
+   (1 par ligne sur téléphone) */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espace-m);
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* --- Carte d'un projet (voir <article class="project-card">) --- */
+/* Même style que la carte "Qui suis-je ?" de la page À propos */
+.project-card {
+  flex: 1 1 280px;
+  max-width: 500px;
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure-carte);
+  border-radius: 1.5rem;
+  overflow: hidden; /* pour que la capture suive les coins arrondis */
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+  border-color: var(--jaune-clair);
+  transform: translateY(-5px);
+}
+
+.project-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--bordure-carte);
+}
+
+.project-body {
+  padding: 1.25rem;
+  color: var(--texte-creme);
+}
+
+.project-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.project-desc {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Petites étiquettes des technos (même bordure jaune que les skills) */
+.project-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-tags li {
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--jaune-clair);
+  border: 1px solid var(--jaune-clair);
+  border-radius: 999px;
+}
+
+/* Bouton jaune, comme "Écrire un mail" sur la page Contact */
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  background-color: var(--jaune);
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.project-link:hover {
+  background-color: var(--jaune-fonce);
+}
+
+.projects-soon {
+  margin: var(--espace-l) 0 20px;
   color: var(--texte-clair);
-  text-shadow: var(--ombre-texte);
 }
 
 /* Rond qui tourne ("chargement") */

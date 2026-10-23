@@ -44,9 +44,49 @@
     <!-- Calque flou pendant le changement de page : style dans style.css, partie "TRANSITIONS" -->
     <div class="page-transition" id="page-transition"></div>
 
-    <!-- Section Projets (page en construction) : style dans style.css, partie "PROJETS" -->
+    <!-- Section Projets : style dans style.css, partie "PROJETS" -->
     <main class="projects">
-      <h1>En cours...</h1>
+      <h1 class="page-title">Mes projets</h1>
+
+      <div class="projects-grid">
+        <!-- Carte projet : pour en ajouter un, copier tout le bloc <article> -->
+        <!-- ⚠️ Projet d'exemple : remplacer le texte, la capture et le lien par un vrai projet -->
+        <article class="project-card">
+          <img
+            class="project-img"
+            src="assets/images/projet-meteo.webp"
+            alt="Capture de l'application Météo Express : recherche d'une ville et météo de Paris sur 4 jours"
+            width="800"
+            height="500"
+            loading="lazy"
+          />
+          <div class="project-body">
+            <h2 class="project-title">Météo Express</h2>
+            <p class="project-desc">
+              Application météo : on tape le nom d'une ville et elle affiche la
+              température, le vent, l'humidité et les prévisions des 4 prochains
+              jours. Les données viennent de l'API OpenWeatherMap, récupérées en
+              JavaScript avec fetch().
+            </p>
+            <ul class="project-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>API REST</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/mxmazhar21"
+              target="_blank"
+              rel="noopener"
+              >Voir le code sur GitHub</a
+            >
+          </div>
+        </article>
+      </div>
+
+      <!-- Rond qui tourne : d'autres projets arrivent -->
+      <p class="projects-soon">D'autres projets arrivent bientôt...</p>
       <div class="loader"></div>
     </main>
 
