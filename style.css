@@ -624,7 +624,7 @@ footer p {
 }
 
 /* Les cartes se mettent côte à côte quand il y a de la place, centrées
-   (1 par ligne sur téléphone) */
+   (2 par ligne sur ordinateur, 1 par ligne sur téléphone) */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -637,7 +637,7 @@ footer p {
 /* --- Carte d'un projet (voir <article class="project-card">) --- */
 /* Même style que la carte "Qui suis-je ?" de la page À propos */
 .project-card {
-  flex: 1 1 280px;
+  flex: 1 1 400px;
   max-width: 500px;
   background: var(--fond-carte);
   border: 1px solid var(--bordure-carte);
@@ -656,6 +656,25 @@ footer p {
   width: 100%;
   height: auto;
   border-bottom: 1px solid var(--bordure-carte);
+}
+
+/* Faux terminal à la place de la capture (projets en console),
+   même format 16/10 que les captures */
+.project-terminal {
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  padding: 1.25rem;
+  overflow: hidden;
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--texte-creme);
+  background: #0d1117;
+  border-bottom: 1px solid var(--bordure-carte);
+}
+
+.project-terminal span {
+  color: var(--jaune-clair);
 }
 
 .project-body {

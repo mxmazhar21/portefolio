@@ -6,13 +6,13 @@
     <title>Projets | Maz'Wave – Mazhar Muhammad</title>
     <meta
       name="description"
-      content="Les projets web de Mazhar Muhammad, développeur Full Stack : projets personnels et pédagogiques."
+      content="Les projets de Mazhar Muhammad : cybersécurité, réseau et programmation en C, C++ et Python."
     />
     <!-- Aperçu affiché quand on partage le lien (LinkedIn, Discord...) -->
     <meta property="og:title" content="Projets – Mazhar Muhammad" />
     <meta
       property="og:description"
-      content="Les projets web de Mazhar Muhammad, développeur Full Stack."
+      content="Les projets de Mazhar Muhammad : cybersécurité, réseau, C, C++ et Python."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" href="assets/images/m2.png" />
@@ -50,33 +50,117 @@
 
       <div class="projects-grid">
         <!-- Carte projet : pour en ajouter un, copier tout le bloc <article> -->
-        <!-- ⚠️ Projet d'exemple : remplacer le texte, la capture et le lien par un vrai projet -->
         <article class="project-card">
           <img
             class="project-img"
-            src="assets/images/projet-meteo.webp"
-            alt="Capture de l'application Météo Express : recherche d'une ville et météo de Paris sur 4 jours"
+            src="assets/images/projet-sentinellite.jpg"
+            alt="Tableau de bord de SentinelLite : compteurs d'alertes, alertes par heure et top 10 des IP sources"
             width="800"
             height="500"
             loading="lazy"
           />
           <div class="project-body">
-            <h2 class="project-title">Météo Express</h2>
+            <h2 class="project-title">SentinelLite</h2>
             <p class="project-desc">
-              Application météo : on tape le nom d'une ville et elle affiche la
-              température, le vent, l'humidité et les prévisions des 4 prochains
-              jours. Les données viennent de l'API OpenWeatherMap, récupérées en
-              JavaScript avec fetch().
+              Mini-SIEM : lit les logs SSH et Nginx d'un serveur Linux, détecte
+              les attaques courantes (brute force SSH, scan de répertoires,
+              injection SQL, remontée de répertoire), les enregistre en base
+              SQLite et les affiche sur un tableau de bord web.
             </p>
             <ul class="project-tags">
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>SQLite</li>
               <li>JavaScript</li>
-              <li>API REST</li>
+              <li>Cybersécurité</li>
             </ul>
             <a
               class="project-link"
-              href="https://github.com/mxmazhar21"
+              href="https://github.com/mxmazhar21/sentinellite"
+              target="_blank"
+              rel="noopener"
+              >Voir le code sur GitHub</a
+            >
+          </div>
+        </article>
+
+        <!-- Projets en console : un faux terminal remplace la capture -->
+        <article class="project-card">
+          <pre class="project-terminal" aria-hidden="true"><span>$</span> ./portscan 127.0.0.1 -p 8080,9999
+PORT      ÉTAT     SERVICE
+8080/tcp  ouvert   http-alt
+9999/tcp  fermé    -</pre>
+          <div class="project-body">
+            <h2 class="project-title">PortScan-C</h2>
+            <p class="project-desc">
+              Scanner de ports TCP en ligne de commande : classe chaque port
+              (ouvert, fermé, filtré), récupère le nom et la bannière du
+              service, génère un rapport texte ou HTML et propose un mode
+              multi-thread.
+            </p>
+            <ul class="project-tags">
+              <li>C</li>
+              <li>Sockets POSIX</li>
+              <li>pthread</li>
+              <li>Réseau</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/mxmazhar21/portscan-c"
+              target="_blank"
+              rel="noopener"
+              >Voir le code sur GitHub</a
+            >
+          </div>
+        </article>
+
+        <article class="project-card">
+          <pre class="project-terminal" aria-hidden="true"><span>mini-shell&gt;</span> ls | grep c &gt; resultat.txt
+<span>mini-shell&gt;</span> cd ..
+<span>mini-shell&gt;</span> exit</pre>
+          <div class="project-body">
+            <h2 class="project-title">mini-shell</h2>
+            <p class="project-desc">
+              Petit interpréteur de commandes inspiré de bash : exécution de
+              programmes, redirections (&gt; et &gt;&gt;), pipes enchaînés et
+              commandes internes cd et exit.
+            </p>
+            <ul class="project-tags">
+              <li>C</li>
+              <li>Processus</li>
+              <li>Linux</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/mxmazhar21/mini-shell"
+              target="_blank"
+              rel="noopener"
+              >Voir le code sur GitHub</a
+            >
+          </div>
+        </article>
+
+        <article class="project-card">
+          <pre class="project-terminal" aria-hidden="true"> X | O | X
+---+---+---
+   | X | O
+---+---+---
+ O |   | X</pre>
+          <div class="project-body">
+            <h2 class="project-title">Morpion C++</h2>
+            <p class="project-desc">
+              Jeu de Morpion en console contre un autre joueur ou une IA simple.
+              Le projet met en pratique la programmation orientée objet :
+              classes, héritage, classe abstraite et polymorphisme.
+            </p>
+            <ul class="project-tags">
+              <li>C++17</li>
+              <li>POO</li>
+              <li>Tests</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/mxmazhar21/morpion-cpp"
               target="_blank"
               rel="noopener"
               >Voir le code sur GitHub</a
