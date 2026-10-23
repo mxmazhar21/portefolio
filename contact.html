@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Maz'Wave – Mazhar Muhammad</title>
+    <meta
+      name="description"
+      content="Contactez Mazhar Muhammad, développeur Full Stack en recherche d'alternance : email, téléphone et LinkedIn."
+    />
+    <!-- Aperçu affiché quand on partage le lien (LinkedIn, Discord...) -->
+    <meta property="og:title" content="Contact – Mazhar Muhammad" />
+    <meta
+      property="og:description"
+      content="Contactez Mazhar Muhammad, développeur Full Stack en recherche d'alternance."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="assets/images/m2.png" />
+    <!-- Police Poppins : 2 graisses seulement (300 et 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Vidéo de fond + calque noir pour le fondu : style dans style.css, partie "CONTACT" -->
+    <!-- data-fade-time = nombre de secondes avant la fin où le fondu au noir commence (voir script.js) -->
+    <div class="video-background-container">
+      <video
+        class="contact-video"
+        src="assets/videos/contact.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        data-fade-time="1.2"
+      ></video>
+      <div class="video-fade-overlay"></div>
+    </div>
+
+    <!-- Menu : style dans style.css, partie "NAVBAR" -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Mon Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="apropos.html" class="nav-link">À propos</a></li>
+          <li><a href="projet.html" class="nav-link">Projets</a></li>
+          <li>
+            <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Calque flou pendant le changement de page : style dans style.css, partie "TRANSITIONS" -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- Section Contact : style dans style.css, partie "CONTACT" -->
+    <main class="contact">
+      <section class="contact-container">
+        <h1>Contactez-moi</h1>
+
+        <div class="contact-info">
+          <p>
+            <strong>Email :</strong>
+            <a href="mailto:m.mazhar.pro21@gmail.com">m.mazhar.pro21@gmail.com</a>
+          </p>
+          <p>
+            <strong>Téléphone :</strong>
+            <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+          </p>
+          <p><strong>Ville :</strong> Le Blanc-mesnil, France</p>
+        </div>
+
+        <!-- Les emojis sont cachés aux lecteurs d'écran (aria-hidden) -->
+        <div class="contact-buttons">
+          <a href="mailto:m.mazhar.pro21@gmail.com" class="contact-btn mail-btn">
+            <span aria-hidden="true">📨</span> Écrire un mail
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mazhar-profil"
+            target="_blank"
+            rel="noopener"
+            class="contact-btn linkedin-btn"
+          >
+            <span aria-hidden="true">🔗</span> LinkedIn
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

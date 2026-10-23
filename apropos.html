@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos | Maz'Wave – Mazhar Muhammad</title>
+    <meta
+      name="description"
+      content="Qui suis-je ? Présentation, compétences (HTML, CSS, JavaScript, PHP, Python...) et CV de Mazhar Muhammad, développeur Full Stack en recherche d'alternance."
+    />
+    <!-- Aperçu affiché quand on partage le lien (LinkedIn, Discord...) -->
+    <meta property="og:title" content="À propos – Mazhar Muhammad" />
+    <meta
+      property="og:description"
+      content="Présentation, compétences et CV de Mazhar Muhammad, développeur Full Stack."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="assets/images/m2.png" />
+    <!-- Police Poppins : 2 graisses seulement (300 et 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Menu : style dans style.css, partie "NAVBAR" -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Mon Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li>
+            <a href="apropos.html" class="nav-link" aria-current="page">À propos</a>
+          </li>
+          <li><a href="projet.html" class="nav-link">Projets</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Calque flou pendant le changement de page : style dans style.css, partie "TRANSITIONS" -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- Contenu de la page : style dans style.css, partie "À PROPOS" -->
+    <main class="about">
+      <h1 class="page-title">Mon Profil</h1>
+
+      <!-- Section Qui suis-je : style dans style.css, partie "À PROPOS > Qui suis-je" -->
+      <section class="about-card">
+        <h2 class="about-title">Qui suis-je ?</h2>
+        <div class="about-content">
+          <div class="about-photo-box">
+            <img
+              class="about-photo"
+              src="assets/images/pdp.webp"
+              alt="Photo de Mazhar Muhammad"
+              width="1023"
+              height="990"
+            />
+          </div>
+          <div class="about-text">
+            <p>
+              Bonjour à tous ! Je m’appelle Mazhar Muhammad et je suis à la
+              recherche d’une alternance en tant que développeur Full Stack. Ce
+              métier me passionne car, pour moi, programmer est bien plus qu’un
+              travail : c’est un art qui allie créativité et technique.
+            </p>
+            <p>
+              Je réalise régulièrement des projets personnels et pédagogiques
+              pour renforcer mes compétences en développement web. Mon objectif
+              est de créer des applications fonctionnelles, ergonomiques et
+              esthétiques, adaptées aux besoins des utilisateurs. Si vous
+              cherchez un développeur Full Stack motivé, curieux et désireux
+              d’apprendre, je serais ravi de rejoindre votre équipe en
+              alternance. N’hésitez pas à me contacter !
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flèche qui descend vers les Skills (le défilement doux est fait en CSS) -->
+      <a class="scroll-down" href="#skills" aria-label="Descendre jusqu'aux skills">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M11.9997 13.1716L7.04996 8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z"
+            fill="#ffce73"
+          ></path>
+        </svg>
+      </a>
+
+      <!-- Bandeau vidéo : style dans style.css, partie "À PROPOS > Bandeau vidéo" -->
+      <!-- data-fade-time = nombre de secondes avant la fin où le fondu au noir commence (voir script.js) -->
+      <div class="video-container">
+        <video
+          class="about-video"
+          src="assets/videos/apropos.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          data-fade-time="2"
+        ></video>
+        <div class="video-fade-overlay"></div>
+      </div>
+
+      <!-- Section Skills : style dans style.css, partie "À PROPOS > Skills" -->
+      <!-- alt="" sur les icônes : le nom de la techno est déjà écrit à côté -->
+      <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-grid">
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">HTML</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">CSS</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="assets/skill_icone/js-128.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">JavaScript</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn.iconscout.com/icon/free/png-256/free-php-2038871-1720084.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">PHP</span>
+              <span class="status-tech">Intermédiaire</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">Python</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="assets/skill_icone/github-128.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">GitHub</span>
+              <span class="status-tech">Intermédiaire</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">MySql</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">NodeJs</span>
+              <span class="status-tech">Intermédiaire</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">Langage C++</span>
+              <span class="status-tech">Intermédiaire</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">Bootstrap</span>
+              <span class="status-tech">Débutant</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">Tailwind</span>
+              <span class="status-tech">Avancé</span>
+            </div>
+          </li>
+          <li class="item-tech">
+            <img class="img-tech" src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="" width="48" height="48" loading="lazy" />
+            <div class="tech-text">
+              <span class="tech">ReactJs</span>
+              <span class="status-tech">Intermédiaire</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section CV : style dans style.css, partie "À PROPOS > CV" -->
+      <!-- Carte inspirée de Uiverse.io (Javierrocadev) -->
+      <section class="cv">
+        <h2 class="section-title">Curriculum vitæ</h2>
+        <div class="cv-card">
+          <div class="cv-initials">
+            <span>MM</span>
+            <p>Développeur FullStack</p>
+          </div>
+          <a href="cv_muhammad_mazhar.pdf" download class="cv-download">
+            Download CV
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- Silhouette décorative en 2 couches (contour épais + contour fin) -->
+          <svg class="cv-avatar cv-avatar-back" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              stroke-width="5"
+              stroke-miterlimit="10"
+              d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z"
+            ></path>
+          </svg>
+          <svg class="cv-avatar cv-avatar-front" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              stroke-width="2"
+              stroke-miterlimit="10"
+              d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bouton retour en haut : style dans style.css, partie "À PROPOS > Retour en haut" -->
+    <a class="back-to-top" href="#" aria-label="Retour en haut de la page">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M11.9997 10.8284L16.9495 15.7781L18.3637 14.3639L11.9997 8L5.63574 14.3639L7.04996 15.7781L11.9997 10.8284Z"
+          fill="#ffce73"
+        ></path>
+      </svg>
+    </a>
+
+    <!-- Pied de page : style dans style.css, partie "FOOTER" -->
+    <footer>
+      <p>© 2025 Mazhar Muhammad. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
