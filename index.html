@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mazhar Muhammad – Développeur Full Stack | Maz'Wave</title>
+    <meta
+      name="description"
+      content="Portfolio de Mazhar Muhammad, développeur Full Stack à la recherche d'une alternance. Découvrez mon profil, mes compétences et mes projets."
+    />
+    <!-- Aperçu affiché quand on partage le lien (LinkedIn, Discord...) -->
+    <meta property="og:title" content="Mazhar Muhammad – Développeur Full Stack" />
+    <meta
+      property="og:description"
+      content="Portfolio de Mazhar Muhammad, développeur Full Stack à la recherche d'une alternance."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="assets/images/m2.png" />
+    <!-- Police Poppins : 2 graisses seulement (300 et 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Vidéo de fond : style dans style.css, partie "ACCUEIL" -->
+    <!-- La vidéo fait déjà l'aller-retour (avant + arrière), donc "loop" suffit -->
+    <video
+      class="background-video"
+      src="assets/videos/accueil.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+
+    <!-- Menu : style dans style.css, partie "NAVBAR" -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Mon Portfolio</div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link" aria-current="page">Accueil</a>
+          </li>
+          <li><a href="apropos.html" class="nav-link">À propos</a></li>
+          <li><a href="projet.html" class="nav-link">Projets</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Calque flou pendant le changement de page : style dans style.css, partie "TRANSITIONS" -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- Section Accueil : style dans style.css, partie "ACCUEIL" -->
+    <!-- Le texte du h1 est écrit ici, script.js l'efface puis le retape lettre par lettre -->
+    <main class="hero">
+      <h1>
+        <span id="typed-text">Salut, moi c’est Mazhar, développeur passionné.</span
+        ><span class="cursor" aria-hidden="true">|</span>
+      </h1>
+      <p>Bienvenue dans mon univers numérique</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
